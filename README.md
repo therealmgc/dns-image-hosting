@@ -40,3 +40,7 @@ Thanks to:
 - scenario: description and image (firewall, rabbit hole (port 53)
 
 - video
+
+- profile image
+
+- project -> public
