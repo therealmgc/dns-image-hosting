@@ -23,6 +23,12 @@ chmod +x *.sh
  
 ```
 
+## REFs
+   https://hub.docker.com/r/technitium/dns-server
+   https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md
+   https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command
+
+
 ## Credits
 Thanks to:
 - The team at Technitium for their great work on popular open-source tools
