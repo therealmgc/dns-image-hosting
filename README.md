@@ -35,3 +35,8 @@ Thanks to:
 - [Asher Falcon](https://github.com/ashfn) for the inspiration on [that](https://github.com/ashfn/dnsimg)
 - azzy_roth from Pixabay for the "Wonderful" [picture](https://pixabay.com/users/azzy_roth-143196/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=276452)
 
+## TODO
+
+- scenario: description and image (firewall, rabbit hole (port 53)
+
+- video
