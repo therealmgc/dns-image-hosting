@@ -1,6 +1,6 @@
 # dns-image-hosting
 hosting images inside TXT records
-![Alice in Wonderland](/images/alice-in-wonderland-276452_640.png")
+![Alice in Wonderland](images/alice-in-wonderland-276452_640.png")
 
 
 ## HowTo
