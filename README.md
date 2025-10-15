@@ -1,6 +1,10 @@
 # dns-image-hosting
 Hiding images inside TXT records
+
 TODO: repo name?
+
+
+![Wonderland lab](images/Wonderland_lab.png)
 
 ## Description
 
@@ -22,7 +26,7 @@ This repository provideis a fully functional environment for testing image uploa
 
 The information provided in this repository is for general educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in severe legal consequences.
 
-![Alice in Wonderland](images/alice-tea-time-320x240.png)
+
 
 ## HowTo
 ```
@@ -46,9 +50,14 @@ chmod +x *.sh
  
 ```
 
+![Alice in Wonderland](images/alice-tea-time-320x240.png)
+
+
 ## REFs
    https://hub.docker.com/r/technitium/dns-server
+   
    https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md
+   
    https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command
 
 
