@@ -1,5 +1,26 @@
 # dns-image-hosting
 Hosting images inside TXT records
+TODO: evalute the term "hide" vs "host"
+
+## Description
+
+DNS TXT records can be used both as a covert channel to upload and exfiltrate data (including images), or as a method to download content (let’s say an image) to a host while bypassing firewalls and content filters, since DNS traffic is often less scrutinized. This constitutes a misuse of the protocol’s features and may be flagged as a potential security threat.
+
+How it works:
+
+- An image is converted to a string of text (often using Base64 encoding).
+
+- This string is broken up into smaller chunks, with each chunk placed in a separate DNS TXT record.
+
+- The size of each chunk is limited to a maximum size per TXT record 
+
+- An attacker can then retrieve the records to reconstruct the image.
+
+
+## Disclaimer
+This repository is provided strictly for educational purposes in the field of information security, including but not limited to penetration testing, security research, and digital forensics.
+Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized or unlawful use may constitute a violation of applicable laws and could result in severe legal consequences.
+
 
 ![Alice in Wonderland](images/alice-in-wonderland-276452_640.png)
 
