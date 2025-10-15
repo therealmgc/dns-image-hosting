@@ -1,6 +1,6 @@
 # dns-image-hosting
-Hosting images inside TXT records
-TODO: evalute the term "hide" vs "host"
+Hiding images inside TXT records
+TODO: repo name?
 
 ## Description
 
@@ -16,13 +16,13 @@ How it works:
 
 - An attacker can then retrieve the records to reconstruct the image.
 
+This repository provideis a fully functional environment for testing image uploads and downloads to and from a DNS server.
 
 ## Disclaimer
-This repository is provided strictly for educational purposes in the field of information security, including but not limited to penetration testing, security research, and digital forensics.
-Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized or unlawful use may constitute a violation of applicable laws and could result in severe legal consequences.
 
+The information provided in this repository is for general educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in severe legal consequences.
 
-![Alice in Wonderland](images/alice-in-wonderland-276452_640.png)
+![Alice in Wonderland](images/alice-tea-time-320x240.png)
 
 ## HowTo
 ```
@@ -41,6 +41,8 @@ chmod +x *.sh
 cd code
 chmod +x *.sh
 ./download.sh
+
+# The retrieved image is stored into 'image.bin' file
  
 ```
 
