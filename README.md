@@ -4,7 +4,7 @@ Hiding images inside TXT records
 TODO: repo name?
 
 
-![Wonderland lab](images/Wonderland_lab.png)
+![Wonderland lab](images/wonderland-lab.png)
 
 ## Description
 
@@ -39,7 +39,7 @@ http://localhost:5380
 # Upload image
 cd code
 chmod +x *.sh
-./upload.sh ../images/alice-in-wonderland-276452_640.png
+./upload.sh ../images/whiterabbit.png
 
 # Download image
 cd code
@@ -49,9 +49,6 @@ chmod +x *.sh
 # The retrieved image is stored into 'image.bin' file
  
 ```
-
-![Alice in Wonderland](images/alice-tea-time-320x240.png)
-
 
 ## REFs
    https://hub.docker.com/r/technitium/dns-server
