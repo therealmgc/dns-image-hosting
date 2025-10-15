@@ -39,17 +39,17 @@ cat $in_file | base64 -w0 > $in_file64
 pushd "${MYDIR}/${_WORKDIRUP}" > /dev/null || { echo "Directory not found: ${MYDIR}/${_WORKDIRUP}"; exit 1; }
 
 # Split encoded file according to CHUNCKSIZE
-split -b ${_CHUNKSIZE} $in_file64 ${_PREFIX}
+split -b ${_CHUNKSIZE} $in_file64 ${_CHUNCKPREFIX}
 
 # Get number of chunk
-num_chunks=$( ls -1 ${_PREFIX}* | wc -l ) 
+num_chunks=$( ls -1 ${_CHUNCKPREFIX}* | wc -l ) 
 width=${#num_chunks}
 echo "Number of chunks: $num_chunks"
 
 # Rename chunks 
 echo "Renaming chunks with $width digits progression"
-for f in $( ls -1 ${_PREFIX}* ) ; do
-  mv "$f" "$(printf "%s%0${width}d" "${_PREFIX}" "$n")"
+for f in $( ls -1 ${_CHUNCKPREFIX}* ) ; do
+  mv "$f" "$(printf "%s%0${width}d" "${_CHUNCKPREFIX}" "$n")"
   ((n++))
 done
 
@@ -69,7 +69,7 @@ spinner_pid=$!
 
 # Upload chunks
 first=1
-for mychunk in $( ls -1 "${_PREFIX}"* ); do
+for mychunk in $( ls -1 "${_CHUNCKPREFIX}"* ); do
    SUB="${mychunk}.${_DOMAIN}"
    curl -s --data-urlencode "text=$(cat $mychunk)" "http://${_DNSHOST}:${_DNSPORT}/api/zones/records/add?token=$TOKEN&domain=$SUB&type=TXT&ttl=60" > /dev/null
    sleep 0.2
@@ -86,6 +86,7 @@ popd > /dev/null
 kill "$spinner_pid" 2>/dev/null
 wait "$spinner_pid" 2>/dev/null
 
+\rm -fr ${MYDIR}/${_WORKDIRUP} 
 echo
 exit
 

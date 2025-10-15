@@ -33,7 +33,7 @@ spinner_pid=$!
 
 # Restore from chunks 
 for ((ii=0; ii<count; ii++)); do
-   SUB="$(printf "%s%0${width}d" "${_PREFIX}" "$ii").${_DOMAIN}"
+   SUB="$(printf "%s%0${width}d" "${_CHUNCKPREFIX}" "$ii").${_DOMAIN}"
    txt=$( dig @${_DNSHOST} +short TXT $SUB | tr -d '" \n' )
    echo $txt >> ${MYDIR}/image.${_ENC}
    echo -n $txt > ${MYDIR}/${_WORKDIRDWN}/$SUB 
@@ -47,15 +47,10 @@ wait "$spinner_pid" 2>/dev/null
 cat ${MYDIR}/image.${_ENC} |  base64 -d > ${MYDIR}/image.bin                    
 ret=$? 
 \rm -f ${MYDIR}/image.${_ENC}
+\rm -fr ${MYDIR}/${_WORKDIRDWN}
 
 echo
 echo "Exit value is $ret"
 echo
 exit $(( ret % 256 ))
 
-
-
-# TODO: runcheck.sh that does the followindìg:
-# fare file di configurazione di cui faccio source in upload/download/test
-#
-# $> for f in $(ls -1 b64*); do echo $f; diff -w ./$f ./run/$f.labyrinth.lab; done
