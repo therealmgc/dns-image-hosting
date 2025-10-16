@@ -24,7 +24,7 @@ This repository provideis a fully functional environment for testing image uploa
 
 ## Disclaimer
 
-The information provided in this repository is for general educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in severe legal consequences.
+The information provided in this repository is for general educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in legal consequences.
 
 
 
@@ -34,7 +34,7 @@ The information provided in this repository is for general educational and infor
 docker compose up -d
 
 # DNS UI (credentials as per compose file
-http://localhost:5380
+http://<ip>:5380
 
 # Upload image
 cd code
@@ -49,6 +49,13 @@ chmod +x *.sh
 # The retrieved image is stored into 'image.bin' file
  
 ```
+
+## DNS content
+
+![Begin](images/screen01.png)
+[...]
+![End](images/screen02.png)
+
 
 ## REFs
    https://hub.docker.com/r/technitium/dns-server
