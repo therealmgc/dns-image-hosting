@@ -1,10 +1,10 @@
 # dns-image-hosting
-Hiding images inside TXT records
 
-TODO: repo name?
+Hiding images inside TXT records
 
 
 ![Wonderland lab](images/wonderland-lab.png)
+
 
 ## Description
 
@@ -12,29 +12,31 @@ DNS TXT records can be used both as a covert channel to upload and exfiltrate da
 
 How it works:
 
-- An image is converted to a string of text (often using Base64 encoding).
+- An image is converted to a string of text (using Base64 encoding).
 
-- This string is broken up into smaller chunks, with each chunk placed in a separate DNS TXT record.
+- This string is broken up into smaller chunks with fixed maximum size
 
-- The size of each chunk is limited to a maximum size per TXT record 
+- Each chunk is placed in a separate DNS TXT record.
 
-- An attacker can then retrieve the records to reconstruct the image.
+- The records can then be retrieved to reconstruct the originale image.
 
 This repository provideis a fully functional environment for testing image uploads and downloads to and from a DNS server.
 
+The same can be done with any "small" binary file.
+
+
 ## Disclaimer
 
-The information provided in this repository is for general educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in legal consequences.
-
+The information provided in this repository is for educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in legal consequences.
 
 
 ## HowTo
+
+Basically, a compose file is provided to setup the DNS server and two bash scripts implement the upload and download operations; they share the information about DNS server, domain and TXT records naming convention. Downloaded content is saved into image.bin file.
+
 ```
 # Start DNS Server
 docker compose up -d
-
-# DNS UI (credentials as per compose file
-http://<ip>:5380
 
 # Upload image
 cd code
@@ -46,18 +48,35 @@ cd code
 chmod +x *.sh
 ./download.sh
 
+# Checks
+cksum ../images/whiterabbit.png image.bin
+
 # The retrieved image is stored into 'image.bin' file
  
 ```
 
-## DNS content
 
+## DNS content overview
+
+```
+# DNS UI  - see compose file for (weak and plan text) credentials
+http://<ip>:5380
+```
 ![Begin](images/screen01.png)
 [...]
 ![End](images/screen02.png)
 
 
+## Use cases
+
+```
+victim host (pwned) -> upload   (exfiltrate data) 
+victim host (fish)  <- download (malware) 
+```
+
+
 ## REFs
+
    https://hub.docker.com/r/technitium/dns-server
    
    https://github.com/TechnitiumSoftware/DnsServer/blob/master/APIDOCS.md
@@ -66,6 +85,7 @@ chmod +x *.sh
 
 
 ## Credits
+
 Thanks to:
 
 - The team at Technitium for their great work on popular open-source tools
@@ -83,5 +103,7 @@ Thanks to:
 
 - project -> public
 
-- repo name
+- repo name??
+
+- not for production (credentials)
 
