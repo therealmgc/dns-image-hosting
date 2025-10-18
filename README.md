@@ -79,11 +79,13 @@ victim host (phishing)  <- download (malware)
 - DNS Propagation time vs binary size
 
 
-## Mitigation
+## Mitigations
 
 - Monitor DNS for frequent or large TXT record requests.
 
 - DNSSEC
+
+- [...]
 
 ## REFs
 
