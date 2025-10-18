@@ -71,7 +71,7 @@ http://<myipaddress>:5380
 
 ```
 victim host (pwned)    -> upload   (exfiltrate data) 
-victim host (fishing)  <- download (malware) 
+victim host (phishing)  <- download (malware) 
 ```
 
 ## Limitations
