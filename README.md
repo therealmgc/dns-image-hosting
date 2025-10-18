@@ -76,7 +76,7 @@ victim host (phishing)  <- download (malware)
 
 ## Limitations
 
-- DNS Propagation time vs binary size
+- DNS propagation time vs binary size
 
 
 ## Mitigations
