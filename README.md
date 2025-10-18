@@ -1,6 +1,6 @@
 # dns-image-hosting
 
-Hiding images inside TXT records
+Hiding images inside DNS TXT records
 
 
 ![Wonderland lab](images/wonderland-lab.png)
@@ -22,7 +22,7 @@ How it works:
 
 This repository provideis a fully functional environment for testing image uploads and downloads to and from a DNS server.
 
-The same can be done with any "small" binary file.
+The same can be done with any binary file.
 
 
 ## Disclaimer
@@ -74,6 +74,21 @@ victim host (pwned) -> upload   (exfiltrate data)
 victim host (fishing)  <- download (malware) 
 ```
 
+## Limitations
+TODO
+DNS Propagation time vs binary size
+
+
+## Mitigation
+TODO
+
+- Monitor DNS logs for unusual TXT record queries.
+
+- Flag frequent or large TXT record requests.
+
+- Correlate anomalous source IPs.
+
+- DNSSEC
 
 ## REFs
 
