@@ -70,7 +70,7 @@ http://<myipaddress>:5380
 ## Use cases
 
 ```
-victim host (pwned) -> upload   (exfiltrate data) 
+victim host (pwned)    -> upload   (exfiltrate data) 
 victim host (fishing)  <- download (malware) 
 ```
 
