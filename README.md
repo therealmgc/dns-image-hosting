@@ -100,7 +100,7 @@ Thanks to:
 
 - The team at Technitium for their great work on popular open-source tools
 
-- [Asher Falcon](https://github.com/ashfn) for the inspiration on [that](https://github.com/ashfn/dnsimg)
+- [Asher Falcon](https://github.com/ashfn) for having inspired [this topic](https://github.com/ashfn/dnsimg)
 
 
 ## TODO
