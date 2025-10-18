@@ -75,18 +75,13 @@ victim host (fishing)  <- download (malware)
 ```
 
 ## Limitations
-TODO
-DNS Propagation time vs binary size
+
+- DNS Propagation time vs binary size
 
 
 ## Mitigation
-TODO
 
-- Monitor DNS logs for unusual TXT record queries.
-
-- Flag frequent or large TXT record requests.
-
-- Correlate anomalous source IPs.
+- Monitor DNS for frequent or large TXT record requests.
 
 - DNSSEC
 
@@ -110,15 +105,10 @@ Thanks to:
 
 ## TODO
 
-- scenario: description and image (firewall, rabbit hole (port 53)
 
 - video
 
 - profile image
 
 - project -> public
-
-- repo name??
-
-- not for production (credentials)
 
