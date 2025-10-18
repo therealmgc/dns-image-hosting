@@ -71,7 +71,7 @@ http://<ip>:5380
 
 ```
 victim host (pwned) -> upload   (exfiltrate data) 
-victim host (fish)  <- download (malware) 
+victim host (fishing)  <- download (malware) 
 ```
 
 
