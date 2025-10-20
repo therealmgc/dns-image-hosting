@@ -35,13 +35,16 @@ The information provided in this repository is for educational and informational
 Basically, a compose file is provided to setup the DNS server and two bash scripts implement the upload and download operations; they share the information about DNS server, domain and TXT records naming convention. Downloaded content is saved into image.bin file.
 
 ```
-# Start DNS Server
+# Ensure jq and curl are installed
+command -v jq curl
+
+# Start DNS Server - use compose file with docker or podman
 docker compose up -d
 
 # Upload image
 cd code
 chmod +x *.sh
-./upload.sh ../images/whiterabbit.png
+./upload.sh ../images/image.png
 
 # Download image
 cd code
@@ -49,7 +52,7 @@ chmod +x *.sh
 ./download.sh
 
 # Checks
-cksum ../images/whiterabbit.png image.bin
+cksum ../images/image.png image.bin
 
 # The retrieved image is stored into 'image.bin' file
  
@@ -103,6 +106,8 @@ Thanks to:
 - The team at Technitium for their great work on popular open-source tools
 
 - [Asher Falcon](https://github.com/ashfn) for having inspired [this topic](https://github.com/ashfn/dnsimg)
+
+- [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland)" for the royalty-free images
 
 
 ## TODO
