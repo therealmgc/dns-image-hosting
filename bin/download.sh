@@ -5,7 +5,7 @@
 #
 
 MYDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-source "${MYDIR}/env.conf" || (echo "FATAL: Configuration file not found"; exit 1)
+source "${MYDIR}/../config/conf.env" || (echo "FATAL: Configuration file not found"; exit 1)
 
 # Uncomment following line to get log
 # exec > >(tee "${MYDIR}/${_ME}".log) 2>&1
@@ -20,7 +20,7 @@ echo "chunk to be restored: $count; using $width digitrms names"
 
 # Cleanup
 > ${MYDIR}/image.${_ENC}
-> ${MYDIR}/image.bin  
+> ${MYDIR}/restored.image  
 if [ -d ${MYDIR}/${_WORKDIRDWN}/ ]; then  
    \rm -fr ${MYDIR}/${_WORKDIRDWN}
 fi    
@@ -44,7 +44,7 @@ kill "$spinner_pid" 2>/dev/null
 wait "$spinner_pid" 2>/dev/null
 
 # Decode
-cat ${MYDIR}/image.${_ENC} |  base64 -d > ${MYDIR}/image.bin                    
+cat ${MYDIR}/image.${_ENC} |  base64 -d > ${MYDIR}/restored.image                    
 ret=$? 
 \rm -f ${MYDIR}/image.${_ENC}
 \rm -fr ${MYDIR}/${_WORKDIRDWN}

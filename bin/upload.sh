@@ -14,7 +14,8 @@ in_file=$1
 echo "Input file is ${in_file}"
 
 MYDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-source "${MYDIR}/env.conf" || (echo "FATAL: Configuration file not found"; exit 1)
+source "${MYDIR}/../config/conf.env" || (echo "FATAL: Configuration file not found"; exit 1)
+source "${MYDIR}/../compose/.env" || (echo "FATAL: Secrets file not found"; exit 1)
 
 # Uncomment following line to get log
 # exec > >(tee "${MYDIR}/${_ME}".log) 2>&1

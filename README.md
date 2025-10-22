@@ -32,29 +32,33 @@ The information provided in this repository is for educational and informational
 
 ## HowTo
 
-Basically, a compose file is provided to setup the DNS server and two bash scripts implement the upload and download operations; they share the information about DNS server, domain and TXT records naming convention. Downloaded content is saved into image.bin file.
+Basically, a compose file is provided to setup the DNS server and two bash scripts implement the upload and download operations; they share the information about DNS server, domain and TXT records naming convention. Downloaded content is saved into restored.image file.
 
 ```
 # Ensure jq and curl are installed
 command -v jq curl
 
 # Start DNS Server - use compose file with docker or podman
+cd compose
 docker compose up -d
+cd -
 
 # Upload image
-cd code
+cd bin
 chmod +x *.sh
-./upload.sh ../images/image.png
+./upload.sh ../images/alice.png
+cd -
 
 # Download image
-cd code
+cd bin
 chmod +x *.sh
 ./download.sh
 
 # Checks
-cksum ../images/image.png image.bin
+# The retrieved image is stored into 'restored.image' file
+cksum ../images/alice.png restored.image
 
-# The retrieved image is stored into 'image.bin' file
+
  
 ```
 
