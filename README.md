@@ -109,9 +109,9 @@ Thanks to:
 
 - [Asher Falcon](https://github.com/ashfn) for having inspired [this topic](https://github.com/ashfn/dnsimg)
 
-- [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland)" for Alice
+- [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland) for the Alice image
 
-- [Jennifer](https://stock.adobe.com/it/search?k=alice+and+wonderland+rabbit&asset_id=1413750541) for the WhiteRabbitRunnigLate
+- [Jennifer](https://stock.adobe.com/it/search?k=alice+and+wonderland+rabbit&asset_id=1413750541) for the WhiteRabbitRunnigLate image
 
 
 ## TODO
