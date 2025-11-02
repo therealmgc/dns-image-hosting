@@ -58,8 +58,6 @@ chmod +x *.sh
 # The retrieved image is stored into 'restored.image' file
 cksum ../images/alice.png restored.image
 
-
- 
 ```
 
 
@@ -77,8 +75,8 @@ http://<myipaddress>:5380
 ## Use cases
 
 ```
-victim host (pwned)    -> upload   (exfiltrate data) 
-victim host (phishing)  <- download (malware) 
+victim host -> upload   (exfiltrate data) 
+victim host <- download (malware) 
 ```
 
 ## Limitations
@@ -111,7 +109,9 @@ Thanks to:
 
 - [Asher Falcon](https://github.com/ashfn) for having inspired [this topic](https://github.com/ashfn/dnsimg)
 
-- [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland)" for the royalty-free images
+- [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland)" for Alice
+
+- [Jennifer](https://stock.adobe.com/it/search?k=alice+and+wonderland+rabbit&asset_id=1413750541) for the WhiteRabbiteRunnigLate
 
 
 ## TODO
