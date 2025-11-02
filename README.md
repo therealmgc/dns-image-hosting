@@ -111,7 +111,7 @@ Thanks to:
 
 - [Vecteezy](https://www.vecteezy.com/free-photos/alice-in-wonderland)" for Alice
 
-- [Jennifer](https://stock.adobe.com/it/search?k=alice+and+wonderland+rabbit&asset_id=1413750541) for the WhiteRabbiteRunnigLate
+- [Jennifer](https://stock.adobe.com/it/search?k=alice+and+wonderland+rabbit&asset_id=1413750541) for the WhiteRabbitRunnigLate
 
 
 ## TODO
