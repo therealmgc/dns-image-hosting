@@ -28,8 +28,8 @@ The same can be done with any binary file.
 ## Use cases
 
 ```
-victim host <- download (malware) 
-victim host -> upload   (exfiltrate data) 
+alice (victim host) <- download (malware) 
+alice (pwned host)  -> upload   (exfiltrate data) 
 ```
 
 
