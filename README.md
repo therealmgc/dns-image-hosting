@@ -72,7 +72,7 @@ cksum ../images/alice.png restored.image
 ## DNS content overview
 
 ```
-# DNS UI  - see compose file for (weak and in plan text) credentials
+# DNS UI  - see compose/.env file for (weak and plan text) credentials
 http://<myipaddress>:5380
 ```
 ![Begin](images/screen01.png)
