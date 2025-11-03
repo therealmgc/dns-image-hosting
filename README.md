@@ -25,6 +25,14 @@ This repository provideis a fully functional environment for testing image uploa
 The same can be done with any binary file.
 
 
+## Use cases
+
+```
+victim host -> upload   (exfiltrate data) 
+victim host <- download (malware) 
+```
+
+
 ## Disclaimer
 
 The information provided in this repository is for educational and informational purposes only. All content is published in good faith and is intended to support ethical learning, especially in cybersecurity and networking-related fields. Users assume full responsibility for any actions taken based on the information, techniques, or tools contained herein. Any unauthorized use may constitute a violation of applicable laws and could result in legal consequences.
@@ -71,13 +79,6 @@ http://<myipaddress>:5380
 [...]
 ![End](images/screen02.png)
 
-
-## Use cases
-
-```
-victim host -> upload   (exfiltrate data) 
-victim host <- download (malware) 
-```
 
 ## Limitations
 
